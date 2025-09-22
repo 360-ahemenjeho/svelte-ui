@@ -76,3 +76,7 @@ html {
   --text-title-2: calc(var(--fontsize-base) * 1.307692308);
   --text-title-3: calc(var(--fontsize-base) * 1.153846154);
 }
+
+body {
+  @apply text-foreground-opaque-primary bg-surface-opaque-primary font-sans text-body;
+}

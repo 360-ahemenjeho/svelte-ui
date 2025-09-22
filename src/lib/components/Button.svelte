@@ -3,6 +3,8 @@
 </script>
 
 <button
-  class="bg-accent-blue-primary py-1.5 px-3 rounded-md border-t-2 border-t-accent-blue-secondary text-body text-neutral-low cursor-pointer"
-  {onclick}>{text}</button
+  class="bg-accent-blue-primary py-1.5 px-4 rounded-lg border border-accent-blue-secondary text-body text-neutral-low cursor-pointer font-semibold"
+  {onclick}
 >
+  {text}
+</button>
