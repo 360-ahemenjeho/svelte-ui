@@ -62,7 +62,6 @@ html {
   --color-overlay-tertiary: oklch(0.954 0 0 / 0.6);
   --color-overlay-quaternary: oklch(0.954 0 0 / 0.48);
   --color-overlay-quinary: oklch(0.954 0 0 / 0.36);
-  /* shadow colors */
   /* neutral colors */
   --color-neutral-low: oklch(1 0 0);
   --color-neutral-high: oklch(0 0 0);
