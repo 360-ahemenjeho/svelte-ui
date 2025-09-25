@@ -7,6 +7,7 @@
     fullround,
     onclick,
     icon,
+    disabled = false,
   }: Button = $props();
 
   type VariationKeys = NonNullable<Button["variation"]>;
@@ -31,11 +32,37 @@
     },
     bare: {
       primary:
-        "bg-accent-brown-primary hover:bg-accent-brown-secondary border-accent-brown-secondary hover:border-accent-brown-tertiary text-neutral-low hover:text-neutral-low/85",
+        "bg-transparent border-transparent text-accent-brown-primary hover:text-accent-brown-primary/85",
       neutral:
-        "bg-surface-opaque-primary hover:bg-surface-opaque-secondary hover:border-surface-opaque-tertiary border-surface-opaque-secondary text-foreground-opaque-primary hover:text-foreground-opaque-primary/85",
+        "bg-transparent border-transparent text-foreground-opaque-primary hover:text-foreground-opaque-primary/85",
       danger:
-        "bg-accent-red-primary hover:bg-accent-red-secondary border-accent-red-secondary hover:border-accent-red-tertiary text-neutral-low hover:text-neutral-low/85",
+        "bg-transparent border-transparent text-accent-red-primary hover:accent-opaque-primary/85",
+    },
+  };
+
+  const disabledColors: Record<VariationKeys, Record<ColorKeys, string>> = {
+    default: {
+      primary:
+        "bg-accent-brown-quinary border-accent-brown-quinary text-accent-brown-quaternary",
+      neutral:
+        "bg-surface-opaque-quinary border-surface-opaque-quinary text-surface-opaque-quaternary",
+      danger:
+        "bg-accent-red-quinary border-accent-red-quinary text-accent-red-quaternary",
+    },
+    alternate: {
+      primary:
+        "bg-accent-brown-quinary border-accent-brown-quinary text-accent-brown-quaternary",
+      neutral:
+        "bg-surface-opaque-quinary border-surface-opaque-quinary text-surface-opaque-quaternary",
+      danger:
+        "bg-accent-red-quinary border-accent-red-quinary text-accent-red-quaternary",
+    },
+    bare: {
+      primary:
+        "bg-transparent border-transparent text-accent-opaque-primary/55",
+      neutral:
+        "bg-transparent border-transparent text-foreground-opaque-primary/55",
+      danger: "bg-transparent border-transparent text-accent-opaque-primary/55",
     },
   };
 
@@ -48,10 +75,13 @@
   };
 
   const radius: string = fullround ? "rounded-full" : "rounded-lg";
+  const pointer: string = disabled
+    ? "cursor-none pointer-events-none"
+    : "cursor-pointer";
 </script>
 
 <button
-  class={`inline-flex items-center gap-1 cursor-pointer leading-none shadow-md border transition-colors duration-75 ${colors[variation][color]} ${sizes[size]} ${radius}`}
+  class={`inline-flex items-center gap-1  leading-none shadow-md border transition-colors duration-75 ${pointer} ${disabled ? disabledColors[variation][color] : colors[variation][color]} ${sizes[size]} ${radius}`}
   {onclick}
 >
   {#if icon}

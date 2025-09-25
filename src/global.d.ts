@@ -11,6 +11,7 @@ declare global {
     fullround?: boolean;
     onclick?: (event: MouseEvent<HTMLButtonElement>) => void;
     icon?: Snippet<[size: string]>;
+    disabled?: boolean;
   }
 
   interface Flow {
