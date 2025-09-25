@@ -7,13 +7,15 @@ html {
 
 @theme {
   --font-sans: "Inter", sans-serif;
+  --font-mono: "Hack", monospace;
+
   --color-*: initial;
-  /* accent colors */
-  --color-accent-blue-primary: oklch(0.603 0.218 257.4);
-  --color-accent-blue-secondary: oklch(0.704 0.138 250.3);
-  --color-accent-blue-tertiary: oklch(0.781 0.107 249.9);
-  --color-accent-blue-quaternary: oklch(0.861 0.073 249.5);
-  --color-accent-blue-quinary: oklch(0.934 0.034 249);
+
+  --color-accent-brown-primary: oklch(0.599 0.065 72.7);
+  --color-accent-brown-secondary: oklch(0.662 0.059 61.2);
+  --color-accent-brown-tertiary: oklch(0.742 0.054 64.9);
+  --color-accent-brown-quaternary: oklch(0.822 0.049 70.1);
+  --color-accent-brown-quinary: oklch(0.901 0.045 76);
   --color-accent-green-primary: oklch(0.784 0.154 142.1);
   --color-accent-green-secondary: oklch(0.817 0.142 142.3);
   --color-accent-green-tertiary: oklch(0.858 0.122 142);
@@ -34,7 +36,7 @@ html {
   --color-accent-yellow-tertiary: oklch(0.902 0.143 95.3);
   --color-accent-yellow-quaternary: oklch(0.927 0.11 95.2);
   --color-accent-yellow-quinary: oklch(0.963 0.029 95);
-  /* surface colors */
+
   --color-surface-opaque-primary: oklch(0.853 0 0);
   --color-surface-opaque-secondary: oklch(0.898 0 0);
   --color-surface-opaque-tertiary: oklch(0.935 0 0);
@@ -45,7 +47,7 @@ html {
   --color-surface-translucent-tertiary: oklch(0 0 0 / 0.05);
   --color-surface-translucent-quaternary: oklch(0 0 0 / 0.03);
   --color-surface-translucent-quinary: oklch(0 0 0 / 0.015);
-  /* foreground colors */
+
   --color-foreground-opaque-primary: oklch(0.318 0 0);
   --color-foreground-opaque-secondary: oklch(0.571 0 0);
   --color-foreground-opaque-tertiary: oklch(0.749 0 0);
@@ -56,15 +58,16 @@ html {
   --color-foreground-translucent-tertiary: oklch(0 0 0 / 0.25);
   --color-foreground-translucent-quaternary: oklch(0 0 0 / 0.1);
   --color-foreground-translucent-quinary: oklch(0 0 0 / 0.05);
-  /* overlay */
+
   --color-overlay-primary: oklch(0.954 0 0 / 0.84);
   --color-overlay-secondary: oklch(0.954 0 0 / 0.72);
   --color-overlay-tertiary: oklch(0.954 0 0 / 0.6);
   --color-overlay-quaternary: oklch(0.954 0 0 / 0.48);
   --color-overlay-quinary: oklch(0.954 0 0 / 0.36);
-  /* neutral colors */
+
   --color-neutral-low: oklch(1 0 0);
   --color-neutral-high: oklch(0 0 0);
+
   --text-*: initial;
   --text-display: calc(var(--fontsize-base) * 3.230769231);
   --text-body: var(--fontsize-base);
@@ -77,5 +80,5 @@ html {
 }
 
 body {
-  @apply text-foreground-opaque-primary bg-surface-opaque-primary font-sans text-body;
+  @apply text-foreground-opaque-primary bg-surface-opaque-quinary font-sans text-body;
 }

@@ -8,7 +8,7 @@
 </script>
 
 <main>
-  <h1 class="text-accent-blue-primary font-bold text-display">
+  <h1 class="text-accent-brown-primary font-bold text-display">
     Accent blue primary
   </h1>
   <Button text="View" onclick={handleClick} />
