@@ -115,7 +115,7 @@
       var(--button-effect-color-secondary) 50%
     );
     z-index: -1;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.75s ease-in-out;
   }
   .button__effect:hover::before {
     opacity: 0.75;
