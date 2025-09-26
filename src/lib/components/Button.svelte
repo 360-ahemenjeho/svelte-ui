@@ -80,11 +80,7 @@
   const shadow: string = variation !== "bare" && !disabled ? "shadow-md" : "";
   const effect: string =
     variation === "default" && !disabled ? "button__effect" : "";
-  interface EffectColor {
-    primary: string;
-    secondary: string;
-  }
-  const effectColor: Record<ColorKeys, EffectColor> = {
+  const effectColor: Record<ColorKeys, ButtonEffectColor> = {
     primary: { primary: "#ffffffb7", secondary: "#ffffff00" },
     neutral: { primary: "#fffffff5", secondary: "#00000000" },
     danger: { primary: "#ffffffb7", secondary: "#ffffff00" },

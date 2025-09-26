@@ -22,4 +22,9 @@ declare global {
     wrap?: boolean;
     children: Snippet;
   }
+
+  interface ButtonEffectColor {
+    primary: string;
+    secondary: string;
+  }
 }

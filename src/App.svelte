@@ -9,7 +9,7 @@
 </script>
 
 <main>
-  <h1 class="font-bold text-display">Accent blue primary</h1>
+  <h1 class="font-bold text-display">Organism Design Sytem</h1>
 
   <Flow vertical space="section">
     <Flow vertical>
