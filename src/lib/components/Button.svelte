@@ -122,10 +122,6 @@
     transition: opacity 0.2s ease-in-out;
   }
   .button__effect:hover::before {
-    opacity: 0.85;
-    background-image: linear-gradient(
-      var(--button-effect-color-secondary) 50%,
-      var(--button-effect-color-primary)
-    );
+    opacity: 0.75;
   }
 </style>
