@@ -21,7 +21,7 @@
           {/snippet}
         </Button>
         <Button label="Share" color="neutral" onclick={handleClick} />
-        <Button label="Delete" color="danger" onclick={handleClick} />
+        <Button label="Remove" color="danger" onclick={handleClick} />
       </Flow>
     </Flow>
     <Flow>
@@ -41,7 +41,7 @@
         {/snippet}</Button
       >
       <Button
-        label="Delete"
+        label="Remove"
         variation="alternate"
         color="danger"
         onclick={handleClick}
@@ -59,8 +59,54 @@
             <Play {size} variation="solid" />
           {/snippet}
         </Button>
-        <Button label="Share" color="neutral" disabled onclick={handleClick} />
-        <Button label="Delete" color="danger" disabled onclick={handleClick} />
+        <Button label="Share" color="neutral" onclick={handleClick} disabled />
+        <Button label="Remove" color="danger" onclick={handleClick} disabled />
+      </Flow>
+    </Flow>
+    <Flow vertical>
+      <h1 class="font-bold text-headline">Bare button</h1>
+      <Flow>
+        <Button label="Play" onclick={handleClick} variation="bare">
+          {#snippet icon(size)}
+            <Play {size} variation="solid" />
+          {/snippet}
+        </Button>
+        <Button
+          label="Share"
+          color="neutral"
+          onclick={handleClick}
+          variation="bare"
+        />
+        <Button
+          label="Remove"
+          color="danger"
+          onclick={handleClick}
+          variation="bare"
+        />
+      </Flow>
+    </Flow>
+    <Flow vertical>
+      <h1 class="font-bold text-headline">Bare disabled</h1>
+      <Flow>
+        <Button label="Play" onclick={handleClick} variation="bare" disabled>
+          {#snippet icon(size)}
+            <Play {size} variation="solid" />
+          {/snippet}
+        </Button>
+        <Button
+          label="Share"
+          color="neutral"
+          onclick={handleClick}
+          variation="bare"
+          disabled
+        />
+        <Button
+          label="Remove"
+          color="danger"
+          onclick={handleClick}
+          variation="bare"
+          disabled
+        />
       </Flow>
     </Flow>
     <Flow vertical>
@@ -78,7 +124,7 @@
           onclick={handleClick}
         />
         <Button
-          label="Delete"
+          label="Remove"
           size="small"
           color="danger"
           onclick={handleClick}
@@ -100,7 +146,7 @@
           onclick={handleClick}
         />
         <Button
-          label="Delete"
+          label="Remove"
           size="large"
           color="danger"
           onclick={handleClick}

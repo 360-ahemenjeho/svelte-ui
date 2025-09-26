@@ -45,7 +45,7 @@
       primary:
         "bg-accent-brown-quinary border-accent-brown-quinary text-accent-brown-quaternary",
       neutral:
-        "bg-surface-opaque-quinary border-surface-opaque-quinary text-surface-opaque-quaternary",
+        "bg-surface-opaque-quinary border-surface-opaque-quinary text-foreground-opaque-quinary",
       danger:
         "bg-accent-red-quinary border-accent-red-quinary text-accent-red-quaternary",
     },
@@ -53,16 +53,15 @@
       primary:
         "bg-accent-brown-quinary border-accent-brown-quinary text-accent-brown-quaternary",
       neutral:
-        "bg-surface-opaque-quinary border-surface-opaque-quinary text-surface-opaque-quaternary",
+        "bg-surface-opaque-quinary border-surface-opaque-quinary text-foreground-opaque-quinary",
       danger:
         "bg-accent-red-quinary border-accent-red-quinary text-accent-red-quaternary",
     },
     bare: {
-      primary:
-        "bg-transparent border-transparent text-accent-opaque-primary/55",
+      primary: "bg-transparent border-transparent text-accent-brown-primary/55",
       neutral:
         "bg-transparent border-transparent text-foreground-opaque-primary/55",
-      danger: "bg-transparent border-transparent text-accent-opaque-primary/55",
+      danger: "bg-transparent border-transparent text-accent-red-primary/55",
     },
   };
 
@@ -78,14 +77,55 @@
   const pointer: string = disabled
     ? "cursor-none pointer-events-none"
     : "cursor-pointer";
+  const shadow: string = variation !== "bare" && !disabled ? "shadow-md" : "";
+  const effect: string =
+    variation === "default" && !disabled ? "button__effect" : "";
+  interface EffectColor {
+    primary: string;
+    secondary: string;
+  }
+  const effectColor: Record<ColorKeys, EffectColor> = {
+    primary: { primary: "#ffffffb7", secondary: "#ffffff00" },
+    neutral: { primary: "#fffffff5", secondary: "#00000000" },
+    danger: { primary: "#ffffffb7", secondary: "#ffffff00" },
+  };
 </script>
 
 <button
-  class={`inline-flex items-center gap-1  leading-none shadow-md border transition-colors duration-75 ${pointer} ${disabled ? disabledColors[variation][color] : colors[variation][color]} ${sizes[size]} ${radius}`}
+  class={`inline-flex items-center gap-1 leading-none  border transition-colors duration-75 ${shadow} ${pointer} ${disabled ? disabledColors[variation][color] : colors[variation][color]} ${sizes[size]} ${radius} ${effect}`}
   {onclick}
+  style="--button-effect-color-primary: {effectColor[color]
+    .primary}; --button-effect-color-secondary: {effectColor[color].secondary}"
 >
   {#if icon}
     {@render icon("14")}
   {/if}
   {label}
 </button>
+
+<style>
+  .button__effect {
+    position: relative;
+    isolation: isolate;
+    z-index: 0;
+  }
+  .button__effect::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-image: linear-gradient(
+      var(--button-effect-color-primary),
+      var(--button-effect-color-secondary) 50%
+    );
+    z-index: -1;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .button__effect:hover::before {
+    opacity: 0.85;
+    background-image: linear-gradient(
+      var(--button-effect-color-secondary) 50%,
+      var(--button-effect-color-primary)
+    );
+  }
+</style>
