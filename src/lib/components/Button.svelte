@@ -24,11 +24,11 @@
     },
     alternate: {
       primary:
-        "bg-surface-opaque-quinary hover:bg-surface-opaque-quaternary border-surface-opaque-primary hover:border-surface-opaque-secondary text-accent-brown-primary hover:text-accent-brown-primary/85",
+        "bg-surface-opaque-quinary hover:bg-surface-opaque-quaternary border-surface-opaque-primary/35 hover:border-surface-opaque-primary/55 text-accent-brown-primary hover:text-accent-brown-primary/85",
       neutral:
-        "bg-surface-opaque-quinary hover:bg-surface-opaque-quaternary border-surface-opaque-primary hover:border-surface-opaque-secondary text-foreground-opaque-primary hover:text-foreground-opaque-primary/85",
+        "bg-surface-opaque-quinary hover:bg-surface-opaque-quaternary border-surface-opaque-primary/35 hover:border-surface-opaque-primary/55 text-foreground-opaque-primary hover:text-foreground-opaque-primary/85",
       danger:
-        "bg-surface-opaque-quinary hover:bg-surface-opaque-quaternary border-surface-opaque-primary hover:border-surface-opaque-secondary text-accent-red-primary hover:text-accent-red-primary/85",
+        "bg-surface-opaque-quinary hover:bg-surface-opaque-quaternary border-surface-opaque-primary/35 hover:border-surface-opaque-primary/55 text-accent-red-primary hover:text-accent-red-primary/85",
     },
     bare: {
       primary:

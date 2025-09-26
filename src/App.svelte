@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Button, Flow } from "@/lib/components";
-  import { Play, Trash, Share } from "svelte-heros-v2";
+  import { Play, Trash, ArrowUpOnSquare } from "svelte-heros-v2";
 
   function handleClick(event: any) {
     console.log("event -> ", event);
@@ -37,7 +37,7 @@
         onclick={handleClick}
       >
         {#snippet icon(size)}
-          <Share {size} variation="solid" />
+          <ArrowUpOnSquare {size} variation="outline" />
         {/snippet}</Button
       >
       <Button
