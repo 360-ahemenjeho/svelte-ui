@@ -37,7 +37,7 @@
         onclick={handleClick}
       >
         {#snippet icon(size)}
-          <ArrowUpOnSquare {size} variation="outline" />
+          <ArrowUpOnSquare {size} variation="solid" />
         {/snippet}</Button
       >
       <Button
