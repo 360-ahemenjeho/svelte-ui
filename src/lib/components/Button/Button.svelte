@@ -21,8 +21,7 @@
     ? "cursor-none pointer-events-none"
     : "cursor-pointer";
   const shadow: string = variation !== "bare" && !disabled ? "shadow-md" : "";
-  const flare: string =
-    variation === "default" && !disabled ? "button_flare" : "";
+  const flare: string = variation === "default" && !disabled ? "flare" : "";
   const _state: keyof ButtonStates = disabled ? "disabled" : "active";
 
   function handleMouseEnter() {
@@ -43,7 +42,7 @@
 
 <button
   bind:this={button}
-  class={`inline-flex items-center gap-1 leading-none  border transition-colors duration-700 ${shadow} ${pointer} ${colors[_state][variation][color]} ${sizes[size]} ${radius} ${flare}`}
+  class={`inline-flex items-center gap-1 leading-none  border transition-colors duration-700 relative isolate z-0 overflow-hidden ${shadow} ${pointer} ${colors[_state][variation][color]} ${sizes[size]} ${radius} ${flare}`}
   {onclick}
   style:--flare-color-primary={flareColor[color].primary}
   style:--flare-color-secondary={flareColor[color].secondary}
@@ -55,20 +54,20 @@
     {@render icon("14")}
   {/if}
   {label}
+  {#if showGlass}
+    <div
+      class="glass"
+      style:left={glassCoords.x + "px"}
+      style:top={glassCoords.y + "px"}
+    ></div>
+  {/if}
 </button>
 
 <style>
-  .button_flare {
-    position: relative;
-    isolation: isolate;
-    z-index: 0;
-  }
-
-  .button_flare::before {
+  .flare::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: inherit;
     background-image: linear-gradient(
       var(--flare-color-primary),
       var(--flare-color-secondary) 50%
@@ -78,7 +77,30 @@
     filter: brightness(1.3) contrast(1.1);
   }
 
-  .button_flare:hover::before {
-    filter: brightness(2) contrast(1.5);
+  .flare:hover::before {
+    filter: brightness(1) contrast(1.2);
+  }
+
+  .glass {
+    --size: 24px;
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--size);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(2px) brightness(1.2);
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 60%,
+      transparent 100%
+    );
+    box-shadow:
+      inset 0 0 6px rgba(255, 255, 255, 0.3),
+      inset 0 0 8px rgba(255, 255, 255, 0.1),
+      0 0 6px rgba(255, 255, 255, 0.2);
+    transition: opacity 0.3s ease;
+    z-index: 0;
   }
 </style>
