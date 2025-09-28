@@ -86,7 +86,7 @@
 </script>
 
 <button
-  class={`inline-flex items-center gap-1 leading-none  border transition-colors duration-75 ${shadow} ${pointer} ${colors[_state][variation][color]} ${sizes[size]} ${radius} ${effect}`}
+  class={`inline-flex items-center gap-1 leading-none  border transition-colors duration-700 ${shadow} ${pointer} ${colors[_state][variation][color]} ${sizes[size]} ${radius} ${effect}`}
   {onclick}
   style="--button-effect-color-primary: {effectColor[color]
     .primary}; --button-effect-color-secondary: {effectColor[color].secondary}"
@@ -113,9 +113,10 @@
       var(--button-effect-color-secondary) 50%
     );
     z-index: -1;
-    transition: opacity 0.75s ease-in-out;
+    transition: filter 0.75s ease-in-out;
+    filter: brightness(1.3) contrast(1.1);
   }
   .button__effect:hover::before {
-    opacity: 0.75;
+    filter: brightness(2) contrast(1.5);
   }
 </style>
