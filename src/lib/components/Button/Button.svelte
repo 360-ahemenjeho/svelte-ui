@@ -78,7 +78,7 @@
   }
 
   .flare:hover::before {
-    filter: brightness(1) contrast(1.2);
+    filter: contrast(1.5);
   }
 
   .glass {
