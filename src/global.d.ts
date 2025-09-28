@@ -36,6 +36,5 @@ declare global {
   interface ButtonStates {
     active: ColorVariation;
     disabled: ColorVariation;
-    // focused: ColorVariation
   }
 }
