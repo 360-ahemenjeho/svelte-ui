@@ -1,2 +1,2 @@
-export { default as Button } from "./Button.svelte";
-export { default as Flow } from "./Flow.svelte";
+export { Button as Button } from "./Button";
+export { Flow as Flow } from "./Flow";

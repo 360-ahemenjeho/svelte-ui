@@ -37,4 +37,9 @@ declare global {
     active: ColorVariation;
     disabled: ColorVariation;
   }
+
+  interface ButtonGlassEffectCoords {
+    x: number;
+    y: number;
+  }
 }
