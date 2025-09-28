@@ -1,1 +1,1 @@
-export { default as Flow } from "./Flow.svelte";
+export { default } from "./Flow.svelte";

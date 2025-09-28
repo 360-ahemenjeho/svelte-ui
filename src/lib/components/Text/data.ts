@@ -16,3 +16,9 @@ export const weights: Record<TextWeightKeys, string> = {
   shout: "font-bold",
   roar: "font-black",
 };
+
+export const leads: Record<TextLeadKeys, string> = {
+  hush: "leading-[1]",
+  flow: "leading-[1.5]",
+  breathe: "leading-[2]",
+};

@@ -17,7 +17,8 @@
     "moduleDetection": "force",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "composite": true
   },
   "include": ["src/**/*.ts", "src/**/*.svelte"]
 }

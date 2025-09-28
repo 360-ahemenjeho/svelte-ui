@@ -54,8 +54,11 @@ declare global {
       | "tag"
       | "subheadline";
     weight?: "whisper" | "speak" | "loud" | "shout" | "roar";
-    leading: "hush" | "flow" | "breathe";
+    lead: "hush" | "flow" | "breathe";
+    children: Snippet;
   }
+
   type TextFontKeys = NonNullable<Text["font"]>;
   type TextWeightKeys = NonNullable<Text["weight"]>;
+  type TextLeadKeys = NonNullable<Text["lead"]>;
 }
