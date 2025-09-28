@@ -23,8 +23,19 @@ declare global {
     children: Snippet;
   }
 
-  interface ButtonEffectColor {
+  interface ButtonEffectColors {
     primary: string;
     secondary: string;
+  }
+
+  type VariationKeys = NonNullable<Button["variation"]>;
+  type ColorKeys = NonNullable<Button["color"]>;
+  type ColorVariation = Record<VariationKeys, Record<ColorKeys, string>>;
+  type SizeKeys = NonNullable<Button["size"]>;
+
+  interface ButtonStates {
+    active: ColorVariation;
+    disabled: ColorVariation;
+    // focused: ColorVariation
   }
 }
