@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Button, Flow } from "@/lib/components";
+  import { Button, Flow, Text } from "@/lib/components";
   import { Play, Trash, ArrowUpOnSquare } from "svelte-heros-v2";
 
   function handleClick(event: any) {
@@ -9,11 +9,11 @@
 </script>
 
 <main>
-  <h1 class="font-bold text-display">Organism Design System</h1>
+  <Text weight="roar" font="display">Organism Design System</Text>
 
   <Flow vertical space="section">
     <Flow vertical>
-      <h1 class="font-bold text-headline">Default Size</h1>
+      <Text weight="shout" font="headline">Default Size</Text>
       <Flow>
         <Button label="Play" onclick={handleClick}>
           {#snippet icon(size)}
@@ -52,7 +52,7 @@
       >
     </Flow>
     <Flow vertical>
-      <h1 class="font-bold text-headline">Disabled</h1>
+      <Text weight="shout" font="headline">Disabled</Text>
       <Flow>
         <Button label="Play" onclick={handleClick} disabled>
           {#snippet icon(size)}
@@ -64,7 +64,7 @@
       </Flow>
     </Flow>
     <Flow vertical>
-      <h1 class="font-bold text-headline">Bare button</h1>
+      <Text weight="shout" font="headline">Bare button</Text>
       <Flow>
         <Button label="Play" onclick={handleClick} variation="bare">
           {#snippet icon(size)}
@@ -86,7 +86,7 @@
       </Flow>
     </Flow>
     <Flow vertical>
-      <h1 class="font-bold text-headline">Bare disabled</h1>
+      <Text weight="shout" font="headline">Bare disabled</Text>
       <Flow>
         <Button label="Play" onclick={handleClick} variation="bare" disabled>
           {#snippet icon(size)}
@@ -110,7 +110,7 @@
       </Flow>
     </Flow>
     <Flow vertical>
-      <h1 class="font-bold text-headline">Small Size</h1>
+      <Text weight="shout" font="headline">Small Size</Text>
       <Flow>
         <Button label="Play" size="small" onclick={handleClick}>
           {#snippet icon(size)}
@@ -132,7 +132,7 @@
       </Flow>
     </Flow>
     <Flow vertical>
-      <h1 class="font-bold text-headline">Large Size</h1>
+      <Text weight="shout" font="headline">Large Size</Text>
       <Flow>
         <Button label="Play" size="large" onclick={handleClick}>
           {#snippet icon(size)}

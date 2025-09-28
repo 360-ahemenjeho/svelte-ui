@@ -43,7 +43,7 @@ declare global {
     y: number;
   }
 
-  interface Text {
+  interface FontText {
     font?:
       | "display"
       | "title-1"
@@ -54,7 +54,7 @@ declare global {
       | "tag"
       | "subheadline";
     weight?: "whisper" | "speak" | "loud" | "shout" | "roar";
-    lead: "hush" | "flow" | "breathe";
+    lead?: "hush" | "flow" | "breathe";
     children: Snippet;
   }
 

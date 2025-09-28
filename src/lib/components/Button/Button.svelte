@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { colors, flareColor, sizes } from "./constants";
+  import { colors, flareColor, sizes } from "./data";
 
   const {
     label,
@@ -42,7 +42,7 @@
 
 <button
   bind:this={button}
-  class={`inline-flex items-center gap-1 leading-none  border transition-colors duration-700 relative isolate z-0 overflow-hidden ${shadow} ${pointer} ${colors[_state][variation][color]} ${sizes[size]} ${radius} ${flare}`}
+  class={`inline-flex items-center gap-1 leading-none border-[0.5px] transition-colors duration-700 relative isolate z-0 overflow-hidden ${shadow} ${pointer} ${colors[_state][variation][color]} ${sizes[size]} ${radius} ${flare}`}
   {onclick}
   style:--flare-color-primary={flareColor[color].primary}
   style:--flare-color-secondary={flareColor[color].secondary}
@@ -90,16 +90,8 @@
     pointer-events: none;
     transform: translate(-50%, -50%);
     backdrop-filter: blur(2px) brightness(1.2);
-    background: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 60%,
-      transparent 100%
-    );
-    box-shadow:
-      inset 0 0 6px rgba(255, 255, 255, 0.3),
-      inset 0 0 8px rgba(255, 255, 255, 0.1),
-      0 0 6px rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.021);
+    box-shadow: inset 0 0 4px 1px rgba(255, 255, 255, 0.904);
     transition: opacity 0.3s ease;
     z-index: 0;
   }
