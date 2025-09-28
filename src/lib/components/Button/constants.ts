@@ -50,3 +50,9 @@ export const colors: ButtonStates = {
     },
   },
 };
+
+export const sizes: Record<SizeKeys, string> = {
+  small: "py-1.5 px-3 text-body",
+  default: "py-2 px-4 text-body",
+  large: "py-3 px-5 text-body",
+};

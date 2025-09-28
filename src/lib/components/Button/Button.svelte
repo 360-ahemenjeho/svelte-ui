@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { colors } from "./constants";
+  import { colors, sizes } from "./constants";
 
   const {
     label,
@@ -15,12 +15,6 @@
   let button: HTMLButtonElement;
   let showGlass: boolean = $state(false);
   let glassCoords: ButtonGlassEffectCoords = $state({ x: 0, y: 0 });
-
-  const sizes: Record<SizeKeys, string> = {
-    small: "py-1.5 px-3 text-body",
-    default: "py-2 px-4 text-body",
-    large: "py-3 px-5 text-body",
-  };
 
   const radius: string = fullround ? "rounded-full" : "rounded-lg";
   const pointer: string = disabled
@@ -56,6 +50,7 @@
     isolation: isolate;
     z-index: 0;
   }
+
   .button__effect::before {
     content: "";
     position: absolute;
@@ -69,6 +64,7 @@
     transition: filter 0.75s ease-in-out;
     filter: brightness(1.3) contrast(1.1);
   }
+
   .button__effect:hover::before {
     filter: brightness(2) contrast(1.5);
   }
