@@ -42,4 +42,20 @@ declare global {
     x: number;
     y: number;
   }
+
+  interface Text {
+    font?:
+      | "display"
+      | "title-1"
+      | "title-2"
+      | "title-3"
+      | "headline"
+      | "body"
+      | "tag"
+      | "subheadline";
+    weight?: "whisper" | "speak" | "loud" | "shout" | "roar";
+    leading: "hush" | "flow" | "breathe";
+  }
+  type TextFontKeys = NonNullable<Text["font"]>;
+  type TextWeightKeys = NonNullable<Text["weight"]>;
 }
