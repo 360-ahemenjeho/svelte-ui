@@ -23,7 +23,7 @@ declare global {
     children: Snippet;
   }
 
-  interface ButtonEffectColors {
+  interface ButtonFlareColors {
     primary: string;
     secondary: string;
   }
@@ -38,7 +38,7 @@ declare global {
     disabled: ColorVariation;
   }
 
-  interface ButtonGlassEffectCoords {
+  interface ButtonGlassCoords {
     x: number;
     y: number;
   }

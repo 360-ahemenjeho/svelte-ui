@@ -56,3 +56,9 @@ export const sizes: Record<SizeKeys, string> = {
   default: "py-2 px-4 text-body",
   large: "py-3 px-5 text-body",
 };
+
+export const flareColor: Record<ColorKeys, ButtonFlareColors> = {
+  primary: { primary: "#ffffffb7", secondary: "#ffffff00" },
+  neutral: { primary: "#fffffff5", secondary: "#00000000" },
+  danger: { primary: "#ffffffb7", secondary: "#ffffff00" },
+};
