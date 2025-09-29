@@ -56,7 +56,7 @@
   {label}
   {#if showGlass}
     <div
-      class="glass"
+      class="glass glass_pulse"
       style:left={glassCoords.x + "px"}
       style:top={glassCoords.y + "px"}
     ></div>
@@ -94,5 +94,20 @@
     box-shadow: inset 0 0 4px 1px rgba(255, 255, 255, 0.904);
     transition: opacity 0.3s ease;
     z-index: 0;
+  }
+
+  .glass_pulse {
+    animation: glass-pulse 0.4s ease-out forwards;
+  }
+
+  @keyframes glass-pulse {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
   }
 </style>
