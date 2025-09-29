@@ -78,7 +78,7 @@
   }
 
   .flare:hover::before {
-    filter: contrast(1.5);
+    filter: contrast(150%);
   }
 
   .glass {
@@ -89,9 +89,9 @@
     border-radius: var(--size);
     pointer-events: none;
     transform: translate(-50%, -50%);
-    backdrop-filter: blur(2px) brightness(1.2);
-    background-color: rgba(255, 255, 255, 0.021);
-    box-shadow: inset 0 0 4px 1px rgba(255, 255, 255, 0.904);
+    backdrop-filter: blur(2px) contrast(175%);
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 3px 1px rgba(255, 255, 255, 0.993);
     transition: opacity 0.3s ease;
     z-index: 0;
   }
