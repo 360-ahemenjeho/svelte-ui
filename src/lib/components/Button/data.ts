@@ -2,11 +2,11 @@ export const colors: ButtonStates = {
   active: {
     default: {
       primary:
-        "bg-accent-brown-primary hover:bg-accent-brown-secondary border-accent-brown-secondary hover:border-accent-brown-tertiary text-neutral-low hover:text-neutral-low/85",
+        "bg-accent-brown-primary border-accent-brown-secondary text-neutral-low",
       neutral:
-        "bg-surface-opaque-primary hover:bg-surface-opaque-secondary hover:border-surface-opaque-tertiary border-surface-opaque-secondary text-foreground-opaque-primary hover:text-foreground-opaque-primary/85",
+        "bg-surface-opaque-primary hover:border-surface-opaque-tertiary border-surface-opaque-secondary text-foreground-opaque-primary",
       danger:
-        "bg-accent-red-primary hover:bg-accent-red-secondary border-accent-red-secondary hover:border-accent-red-tertiary text-neutral-low hover:text-neutral-low/85",
+        "bg-accent-red-primary border-accent-red-secondary hover:border-accent-red-tertiary text-neutral-low",
     },
     alternate: {
       primary:

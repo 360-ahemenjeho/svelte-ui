@@ -89,9 +89,9 @@
     border-radius: var(--size);
     pointer-events: none;
     transform: translate(-50%, -50%);
-    backdrop-filter: blur(2px) contrast(175%);
+    backdrop-filter: blur(1px) contrast(175%);
     background-color: rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 3px 1px rgba(255, 255, 255, 0.993);
+    box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.993);
     transition: opacity 0.3s ease;
     z-index: 0;
   }
