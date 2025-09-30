@@ -91,7 +91,7 @@
     transform: translate(-50%, -50%);
     backdrop-filter: blur(1px) contrast(175%);
     background-color: rgba(255, 255, 255, 0);
-    box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.993);
+    box-shadow: inset 0 0 4px 0 rgba(255, 255, 255, 0.993);
     transition: opacity 0.3s ease;
     z-index: 0;
   }
