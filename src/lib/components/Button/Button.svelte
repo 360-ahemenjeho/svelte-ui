@@ -54,7 +54,7 @@
     {@render icon()}
   {/if}
   {label}
-  {#if showGlass}
+  {#if showGlass && variation === "default"}
     <div
       class="glass glass_pulse"
       style:left={glassCoords.x + "px"}
