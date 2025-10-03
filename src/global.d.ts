@@ -55,6 +55,7 @@ declare global {
       | "subheadline";
     weight?: "whisper" | "speak" | "loud" | "shout" | "roar";
     lead?: "hush" | "flow" | "breathe";
+    appearance?: string;
     children: Snippet;
   }
 

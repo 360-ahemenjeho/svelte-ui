@@ -5,10 +5,11 @@
     font = "body",
     weight = "speak",
     lead = "flow",
+    appearance,
     children,
   }: FontText = $props();
 </script>
 
-<p class={`${fonts[font]} ${weights[weight]} ${leads[lead]}`}>
+<p class={`${appearance} ${fonts[font]} ${weights[weight]} ${leads[lead]}`}>
   {@render children()}
 </p>

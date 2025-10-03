@@ -8,7 +8,11 @@
 </script>
 
 <main>
-  <Text weight="roar" font="display">Organism Design System</Text>
+  <Text
+    weight="roar"
+    font="display"
+    appearance="text-foreground-opaque-secondary">Organism Design System</Text
+  >
 
   <Flow vertical space="section">
     <Flow vertical>
