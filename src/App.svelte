@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Button, Flow, Text } from "@/lib/components";
-  import { Play, Trash, ArrowUpOnSquare } from "svelte-heros-v2";
 
   function handleClick(event: any) {
     console.log("event -> ", event);
@@ -16,8 +15,8 @@
       <Text weight="shout" font="headline">Default Size</Text>
       <Flow>
         <Button label="Play" onclick={handleClick}>
-          {#snippet icon(size)}
-            <Play {size} variation="solid" />
+          {#snippet icon()}
+            <i class="ph-fill ph-play"></i>
           {/snippet}
         </Button>
         <Button label="Share" color="neutral" onclick={handleClick} />
@@ -26,8 +25,8 @@
     </Flow>
     <Flow>
       <Button label="Play" variation="alternate" onclick={handleClick}>
-        {#snippet icon(size)}
-          <Play {size} variation="solid" />
+        {#snippet icon()}
+          <i class="ph-fill ph-play"></i>
         {/snippet}
       </Button>
       <Button
@@ -36,8 +35,8 @@
         color="neutral"
         onclick={handleClick}
       >
-        {#snippet icon(size)}
-          <ArrowUpOnSquare {size} variation="solid" />
+        {#snippet icon()}
+          <i class="ph ph-export"></i>
         {/snippet}</Button
       >
       <Button
@@ -46,8 +45,8 @@
         color="danger"
         onclick={handleClick}
       >
-        {#snippet icon(size)}
-          <Trash {size} variation="solid" />
+        {#snippet icon()}
+          <i class="ph-fill ph-trash"></i>
         {/snippet}</Button
       >
     </Flow>
@@ -55,8 +54,8 @@
       <Text weight="shout" font="headline">Disabled</Text>
       <Flow>
         <Button label="Play" onclick={handleClick} disabled>
-          {#snippet icon(size)}
-            <Play {size} variation="solid" />
+          {#snippet icon()}
+            <i class="ph-fill ph-play"></i>
           {/snippet}
         </Button>
         <Button label="Share" color="neutral" onclick={handleClick} disabled />
@@ -67,8 +66,8 @@
       <Text weight="shout" font="headline">Bare button</Text>
       <Flow>
         <Button label="Play" onclick={handleClick} variation="bare">
-          {#snippet icon(size)}
-            <Play {size} variation="solid" />
+          {#snippet icon()}
+            <i class="ph-fill ph-play"></i>
           {/snippet}
         </Button>
         <Button
@@ -89,8 +88,8 @@
       <Text weight="shout" font="headline">Bare disabled</Text>
       <Flow>
         <Button label="Play" onclick={handleClick} variation="bare" disabled>
-          {#snippet icon(size)}
-            <Play {size} variation="solid" />
+          {#snippet icon()}
+            <i class="ph-fill ph-play"></i>
           {/snippet}
         </Button>
         <Button
@@ -113,8 +112,8 @@
       <Text weight="shout" font="headline">Small Size</Text>
       <Flow>
         <Button label="Play" size="small" onclick={handleClick}>
-          {#snippet icon(size)}
-            <Play {size} variation="solid" />
+          {#snippet icon()}
+            <i class="ph-fill ph-play"></i>
           {/snippet}
         </Button>
         <Button
@@ -135,8 +134,8 @@
       <Text weight="shout" font="headline">Large Size</Text>
       <Flow>
         <Button label="Play" size="large" onclick={handleClick}>
-          {#snippet icon(size)}
-            <Play {size} variation="solid" />
+          {#snippet icon()}
+            <i class="ph-fill ph-play"></i>
           {/snippet}
         </Button>
         <Button

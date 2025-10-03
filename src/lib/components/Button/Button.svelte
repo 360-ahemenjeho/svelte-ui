@@ -51,7 +51,7 @@
   onmousemove={handleMouseMove}
 >
   {#if icon}
-    {@render icon("14")}
+    {@render icon()}
   {/if}
   {label}
   {#if showGlass}

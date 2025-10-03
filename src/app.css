@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 html {
-  --fontsize-base: 14px;
+  --fontsize-base: 0.875rem;
 }
 
 @theme {

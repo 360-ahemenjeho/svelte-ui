@@ -10,7 +10,7 @@ declare global {
     variation?: "default" | "alternate" | "bare";
     fullround?: boolean;
     onclick?: (event: MouseEvent<HTMLButtonElement>) => void;
-    icon?: Snippet<[size: string]>;
+    icon?: Snippet;
     disabled?: boolean;
   }
 
